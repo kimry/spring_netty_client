@@ -1,6 +1,6 @@
 package com.kimry.spring_netty_client;
 
-import com.kimry.spring_netty_client.netty.Handler.NettyInitializer;
+import com.kimry.spring_netty_client.netty.handler.NettyInitializer;
 import com.kimry.spring_netty_client.netty.NettyClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;

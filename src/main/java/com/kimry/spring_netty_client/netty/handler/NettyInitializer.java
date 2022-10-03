@@ -1,6 +1,6 @@
-package com.kimry.spring_netty_client.netty.Handler;
+package com.kimry.spring_netty_client.netty.handler;
 
-import com.kimry.spring_netty_client.netty.Handler.decoder.SharableByteArrayDecoder;
+import com.kimry.spring_netty_client.netty.handler.decoder.SharableByteArrayDecoder;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;

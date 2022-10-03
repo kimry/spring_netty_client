@@ -1,4 +1,4 @@
-package com.kimry.spring_netty_client.netty.Handler;
+package com.kimry.spring_netty_client.netty.handler;
 
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;

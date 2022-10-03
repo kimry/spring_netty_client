@@ -1,6 +1,6 @@
 package com.kimry.spring_netty_client.netty;
 
-import com.kimry.spring_netty_client.netty.Handler.NettyInitializer;
+import com.kimry.spring_netty_client.netty.handler.NettyInitializer;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.nio.NioEventLoopGroup;
