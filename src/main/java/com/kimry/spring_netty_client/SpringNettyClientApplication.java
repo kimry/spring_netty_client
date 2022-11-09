@@ -1,8 +1,6 @@
 package com.kimry.spring_netty_client;
 
-import com.kimry.spring_netty_client.netty.handler.NettyInitializer;
-import com.kimry.spring_netty_client.netty.NettyClient;
-import io.netty.bootstrap.Bootstrap;
+import com.kimry.spring_netty_client.util.SendMessageUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,13 +15,12 @@ public class SpringNettyClientApplication {
         SpringApplication.run(SpringNettyClientApplication.class, args);
     }
 
-    private final Bootstrap bs;
+    private final SendMessageUtil sendMessageUtil;
 
     @EventListener(ApplicationReadyEvent.class)
     void run(){
-        for(int i=0; i<5;i++){
-            NettyClient nettyClient = new NettyClient("localhost",8090,"sendMsg_"+i,bs);
-            nettyClient.start();
+        for(int i=0; i<3;i++){
+            sendMessageUtil.sendMessage("localhost",8090,"sendMsg_"+i);
         }
     }
 

@@ -1,4 +1,4 @@
-package com.kimry.spring_netty_client.netty.config;
+package com.kimry.spring_netty_client.config;
 
 import com.kimry.spring_netty_client.netty.handler.NettyInitializer;
 import io.netty.bootstrap.Bootstrap;
