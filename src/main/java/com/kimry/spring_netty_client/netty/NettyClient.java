@@ -4,22 +4,21 @@ import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Async;
 
 import java.net.InetSocketAddress;
 
 @Slf4j
 @RequiredArgsConstructor
-public class NettyClient extends Thread{
+public class NettyClient{
 
     private final String ip;
     private final int port;
     private final String msg;
     private final Bootstrap bs;
 
-    @Override
-    public void run() {
-
-
+    @Async
+    public void sendMessage() {
         try {
             ChannelFuture cf = bs.connect(new InetSocketAddress(ip,port)).sync();
             log.info("송신 메세지 : "+msg);
